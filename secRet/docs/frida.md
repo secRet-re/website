@@ -3,7 +3,7 @@ id: frida
 title: Frida
 sidebar_label: Frida
 ---
-
+    
 ## Getting started
 
 To be more productive, we highly recommend using our [TypeScript](https://www.typescriptlang.org/)
@@ -392,7 +392,7 @@ In the example above we used `script.on('message', on_message)` to monitor for a
         -   tls (ELF)
     -   `section`: if present, is an object containing:
         -   `id`: string containing section index, segment name (if
-                  applicable) and section name – same format as
+                  applicable) and section name ï¿½ same format as
                   [r2][]'s section IDs
         -   `protection`: protection like in `Process.enumerateRanges()`
     -   `name`: symbol name as a string
@@ -1505,7 +1505,7 @@ Interceptor.replace(openPtr, new NativeCallback(function (pathPtr, flags) {
 ## Stalker
 
 +   `Stalker.exclude(range)`: marks the specified memory `range` as excluded,
-    which is an object with `base` and `size` properties – like the properties
+    which is an object with `base` and `size` properties ï¿½ like the properties
     in an object returned by e.g. `Process.getModuleByName()`.
 
     This means Stalker will not follow execution when encountering a call to an
@@ -2014,7 +2014,7 @@ site.baseurl_root }}/news/2019/09/18/frida-12-7-released/).
 
 +   `Kernel.enumerateModuleRanges(name, protection)`: just like
     `Kernel.enumerateRanges`, except it's scoped to the specified module
-    `name` – which may be `null` for the module of the kernel itself. Each
+    `name` ï¿½ which may be `null` for the module of the kernel itself. Each
     range also has a `name` field containing a unique identifier as a string.
 
 +   `Kernel.alloc(size)`: allocate `size` bytes of kernel memory, rounded up to
