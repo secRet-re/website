@@ -4,254 +4,166 @@ title: Dwarf
 sidebar_label: Dwarf
 ---
 
-
 ## backtrace
-
-▸ **backtrace**(`context?`: CpuContext): *DebugSymbol[] | null*
-
 
 Shortcut to retrieve native backtrace
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`context?` | CpuContext |
-
-**Returns:** *DebugSymbol[] | null*
+```javascript
+Interceptor.attach(targetPtr, function() {
+    console.log(backtrace(this.context));
+}
+```
 
 ___
 
 ## enumerateExports
 
-▸ **enumerateExports**(`module`: any): *Array‹ModuleExportDetails›*
-
-
 Enumerate exports for the given module name or pointer
 
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`module` | any | an hex/int address or string name  |
-
-**Returns:** *Array‹ModuleExportDetails›*
+```javascript
+enumerateExports(Process.findModuleByName('libtarget.so'));
+```
 
 ___
 
 ## enumerateImports
 
-▸ **enumerateImports**(`module`: any): *Array‹ModuleExportDetails›*
-
-
 Enumerate imports for the given module name or pointer
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`module` | any |
-
-**Returns:** *Array‹ModuleExportDetails›*
+```javascript
+enumerateImports(Process.findModuleByName('libtarget.so'));
+```
 
 ___
 
 ## enumerateJavaClasses
 
-▸ **enumerateJavaClasses**(`useCache?`: any): *void*
-
-
 Enumerate java classes
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`useCache?` | any |
-
-**Returns:** *void*
+```javascript
+enumerateJavaClasses().forEach(function(clazz) {
+    console.log(clazz);
+});;
+```
 
 ___
 
 ## enumerateJavaMethods
 
-▸ **enumerateJavaMethods**(`className`: string): *void*
-
-
 Enumerate method for the given class name
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`className` | string |
-
-**Returns:** *void*
+```javascript
+enumerateJavaMethods('android.app.Activity');
+```
 
 ___
 
 ## enumerateModuleInfo
 
-▸ **enumerateModuleInfo**(`fridaModule`: Module | string): *Module*
-
-
 Enumerate all information about the module (imports / exports / symbols)
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`fridaModule` | Module &#124; string |
-
-**Returns:** *Module*
+```javascript
+enumerateModuleInfo(Process.findModuleByName('target.so'));
+```
 
 ___
 
 ## enumerateModules
 
-▸ **enumerateModules**(`fillInformation?`: boolean): *Module‹›[]*
-
-
 Enumerate loaded modules
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`fillInformation?` | boolean |
-
-**Returns:** *Module‹›[]*
+```javascript
+enumerateModules(true); // symbols, exports and imports - yes please.
+```
 
 ___
 
 ## enumerateObjCClasses
 
-▸ **enumerateObjCClasses**(`moduleName`: string): *void*
-
-
 Enumerate ObjC classes in the given module
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`moduleName` | string |
-
-**Returns:** *void*
+```javascript
+enumerateObjCClasses('module');
+```
 
 ___
 
 ## enumerateObjCMethods
 
-▸ **enumerateObjCMethods**(`className`: string): *void*
-
-
 Enumerate ObjC methods for the given class
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`className` | string |
-
-**Returns:** *void*
+```javascript
+enumerateObjCMethods('class');
+```
 
 ___
 
 ## enumerateObjCModules
 
-▸ **enumerateObjCModules**(): *void*
-
-
 Enumerate modules for ObjC inspector panel
 
-**Returns:** *void*
+```javascript
+enumerateObjCModules();
+```
 
 ___
 
 ## enumerateRanges
 
-▸ **enumerateRanges**(): *RangeDetails[]*
-
-
 Enumerate all mapped ranges
 
-**Returns:** *RangeDetails[]*
+```javascript
+enumerateRanges().forEach(function(range) {
+    console.log(range.base, range.size);
+});
+```
 
 ___
 
 ## enumerateSymbols
 
-▸ **enumerateSymbols**(`module`: any): *Array‹ModuleSymbolDetails›*
-
-
 Enumerate symbols for the given module name or pointer
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`module` | any |
-
-**Returns:** *Array‹ModuleSymbolDetails›*
+```javascript
+enumerateSymbols('module');
+```
 
 ___
 
 ## evaluate
 
-▸ **evaluate**(`jsCode`: string): *any*
-
-
 Evaluate javascript. Used from the UI to inject javascript code into the process
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`jsCode` | string |
-
-**Returns:** *any*
+```javascript
+evaluate('console.log(1)');
+```
 
 ___
 
 ## evaluateFunction
 
-▸ **evaluateFunction**(`jsFnc`: string): *any*
-
-
 Evaluate javascript. Used from the UI to inject javascript code into the process
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`jsFnc` | string |
-
-**Returns:** *any*
+```javascript
+evaluateFunction('(function() {
+    // do stuff
+})();');
+```
 
 ___
 
 ## evaluatePtr
 
-▸ **evaluatePtr**(`pointer`: any): *NativePointer*
-
-
 Evaluate any input and return a NativePointer
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`pointer` | any |
-
-**Returns:** *NativePointer*
+```javascript
+evaluatePtr(10 + 10 + 0xabcd);
+evaluatePtr('0xabcd');
+```
 
 ___
 
 ## findExport
-
-▸ **findExport**(`name`: any, `module?`: any): *NativePointer | null*
-
 
 Shortcut to quickly retrieve an export
 
@@ -260,140 +172,79 @@ const openAddress = findExport('open');
 const myTargetAddress = findExport('target_func', 'target_module.so');
 ```
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`name` | any |
-`module?` | any |
-
-**Returns:** *NativePointer | null*
-
 ___
 
 ## findModule
 
-▸ **findModule**(`module`: any): *Module | Module[] | null*
-
-
 Find a module providing any argument. Could be a string/int pointer or module name
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`module` | any |
-
-**Returns:** *Module | Module[] | null*
+```javascript
+findModule('mymodule');
+```
 
 ___
 
 ## findSymbol
 
-▸ **findSymbol**(`pattern`: any): *NativePointer‹›[]*
-
-
 Find a symbol matching the given pattern
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`pattern` | any |
-
-**Returns:** *NativePointer‹›[]*
+```javascript
+findSymbol('*link*');
+```
 
 ___
 
 ## getAddressTs
 
-▸ **getAddressTs**(`p`: any): *any[]*
-
-
 get telescope information for the given pointer argument
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`p` | any |
-
-**Returns:** *any[]*
+```javascript
+getAddressTs(0xdeadbeef);
+```
 
 ___
 
 ## getDebugSymbols
 
-▸ **getDebugSymbols**(`ptrs`: any): *DebugSymbol[]*
-
-
 Return an array of DebugSymbol for the requested pointers
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`ptrs` | any |
-
-**Returns:** *DebugSymbol[]*
+```javascript
+getDebugSymbols([ptr(0x1234), ptr(0xabcd)]);
+```
 
 ___
 
 ## getInstruction
 
-▸ **getInstruction**(`address`: any): *string*
-
-
 Shortcut to retrieve an Instruction object for the given address
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`address` | any |
-
-**Returns:** *string*
+```javascript
+getInstruction(0xabcd);
+```
 
 ___
 
 ## getRange
 
-▸ **getRange**(`address`: any): *RangeDetails | null*
-
-
 Return a RangeDetails object or null for the requested pointer
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`address` | any |
-
-**Returns:** *RangeDetails | null*
+```javascript
+getRange(0xabcd);
+```
 
 ___
 
 ## getSymbolByAddress
 
-▸ **getSymbolByAddress**(`pt`: any): *DebugSymbol | null*
-
-
 Return DebugSymbol or null for the given pointer
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`pt` | any |
-
-**Returns:** *DebugSymbol | null*
+```javascript
+getSymbolByAddress(0xabcd);
+```
 
 ___
 
 ## hookAllJavaMethods
-
-▸ **hookAllJavaMethods**(`className`: string, `callback`: Function): *boolean*
-
 
 Hook all the methods for the given java class
 
@@ -403,21 +254,9 @@ hookAllJavaMethods('android.app.Activity', function() {
 })
 ```
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`className` | string |
-`callback` | Function |
-
-**Returns:** *boolean*
-
 ___
 
 ## hookClassLoaderClassInitialization
-
-▸ **hookClassLoaderClassInitialization**(`className`: string, `callback`: Function): *boolean*
-
 
 Receive a callback whenever a java class is going to be loaded by the class loader.
 
@@ -427,21 +266,9 @@ hookClassLoaderClassInitialization('com.target.classname', function() {
 })
 ```
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`className` | string |
-`callback` | Function |
-
-**Returns:** *boolean*
-
 ___
 
 ## hookJavaConstructor
-
-▸ **hookJavaConstructor**(`className`: string, `callback`: Function): *boolean*
-
 
 Hook the constructor of the given java class
 ```javascript
@@ -450,21 +277,9 @@ hookJavaConstructor('android.app.Activity', function() {
 })
 ```
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`className` | string |
-`callback` | Function |
-
-**Returns:** *boolean*
-
 ___
 
 ## hookJavaMethod
-
-▸ **hookJavaMethod**(`targetClassMethod`: string, `callback`: Function): *boolean*
-
 
 Hook the constructor of the given java class
 ```javascript
@@ -479,21 +294,9 @@ hookJavaConstructor('android.app.Activity.onCreate', function() {
 })
 ```
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`targetClassMethod` | string |
-`callback` | Function |
-
-**Returns:** *boolean*
-
 ___
 
 ## hookModuleInitialization
-
-▸ **hookModuleInitialization**(`moduleName`: string, `callback`: Function): *boolean*
-
 
 Receive a callback when the native module is being loaded
 ```javascript
@@ -502,103 +305,56 @@ hookModuleInitialization('libtarget.so', function() {
 });
 ```
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`moduleName` | string |
-`callback` | Function |
-
-**Returns:** *boolean*
-
 ___
 
 ## injectBlob
 
-▸ **injectBlob**(`name`: string, `blob`: string): *number | false | true | NativePointer‹› | UInt64‹› | Int64‹› | any[]*
-
-
 Map the given blob as hex string using memfd:create with the given name
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`name` | string |
-`blob` | string |
-
-**Returns:** *number | false | true | NativePointer‹› | UInt64‹› | Int64‹› | any[]*
-
-a negative integer if error or fd
+```javascript
+injectBlob('blob', 'aabbccddeeff');
+```
 
 ___
 
 ## isAddressWatched
 
-▸ **isAddressWatched**(`pt`: any): *boolean*
-
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`pt` | any |
-
-**Returns:** *boolean*
-
-a boolean indicating if the given pointer is currently watched
+```javascript
+var alreadyWatched = isAddressWatched(0x1234);
+```
 
 ___
 
 ## javaBacktrace
 
-▸ **javaBacktrace**(): *any*
+get the java stack trace. Must be executed in JVM thread
 
-
-**Returns:** *any*
-
-a java stack trace. Must be executed in JVM thread
+```javascript
+Java.perform(function() {
+    console.log(javaBacktrace());
+});
+```
 
 ___
 
 ## jvmExplorer
 
-▸ **jvmExplorer**(`handle`: any): *object*
-
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`handle` | any |
-
-**Returns:** *object*
-
-the explorer object for the given java handle
+get the explorer object for the given java handle.
+required by UI
 
 ___
 
 ## log
 
-▸ **log**(`what`: any): *void*
-
-
 log whatever to Dwarf console
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`what` | any |
-
-**Returns:** *void*
+```javascript
+log('12345');
+```
 
 ___
 
 ## putBreakpoint
-
-▸ **putBreakpoint**(`address_or_class`: any, `condition?`: string | Function): *boolean*
-
 
 put a breakpoint on a native pointer or a java class with an optional evaluated condition
 
@@ -620,21 +376,9 @@ var javaTarget = 'android.app.Activity.onCreate';
 putBreakpoint(javaTarget);
 ```
 
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`address_or_class` | any | - |
-`condition?` | string &#124; Function |   |
-
-**Returns:** *boolean*
-
 ___
 
 ## putJavaClassInitializationBreakpoint
-
-▸ **putJavaClassInitializationBreakpoint**(`className`: string): *boolean*
-
 
 Put a java class initialization breakpoint
 
@@ -642,20 +386,9 @@ Put a java class initialization breakpoint
 putJavaClassInitializationBreakpoint('android.app.Activity');
 ```
 
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`className` | string |   |
-
-**Returns:** *boolean*
-
 ___
 
 ## putModuleInitializationBreakpoint
-
-▸ **putModuleInitializationBreakpoint**(`moduleName`: string): *boolean*
-
 
 Put a native module initialization breakpoint
 
@@ -663,20 +396,9 @@ Put a native module initialization breakpoint
 putModuleInitializationBreakpoint('libtarget.so');
 ```
 
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`moduleName` | string |   |
-
-**Returns:** *boolean*
-
 ___
 
 ## putWatchpoint
-
-▸ **putWatchpoint**(`address`: any, `flags`: string | number, `callback?`: Function): *Watchpoint‹›*
-
 
 Put a watchpoint on the given address
 
@@ -693,185 +415,100 @@ Interceptor.attach(target, {
 });
 ```
 
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`address` | any | - |
-`flags` | string &#124; number | - |
-`callback?` | Function |   |
-
-**Returns:** *Watchpoint‹›*
-
 ___
 
 ## readBytes
 
-▸ **readBytes**(`address`: any, `length`: any): *any[] | ArrayBuffer*
-
-
 A shortcut for safely reading from memory
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`address` | any |
-`length` | any |
-
-**Returns:** *any[] | ArrayBuffer*
-
-an ArrayBuffer of the given length filled with data starting from target address
+```javascript
+var buf = readBytes(0x1234, 32);
+```
 
 ___
 
 ## readPointer
 
-▸ **readPointer**(`pt`: any): *NativePointer‹›*
+get a pointer from the given address
 
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`pt` | any |
-
-**Returns:** *NativePointer‹›*
-
-a pointer from the given address
+```javascript
+var p = readPointer(0x1234);
+```
 
 ___
 
 ## readString
 
-▸ **readString**(`address`: any, `length?`: any): *string*
-
-
 A shortcut and secure way to read a string from a pointer with frida on any os
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`address` | any |
-`length?` | any |
-
-**Returns:** *string*
-
-the string pointed by address until termination or optional length
+```javascript
+var what = readString(0x1234);
+var a = readString(0xabcd, 32);
+```
 
 ___
 
 ## releaseFromJs
 
-▸ **releaseFromJs**(`tid`: any): *void*
+resume the execution of the given thread id when in breakpoints
 
-
-resume the execution of the given thread id
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`tid` | any |
-
-**Returns:** *void*
+```javascript
+Interceptor.attach(0x1234, function() {
+    // do my stuff
+    releaseFromJs(Process.getCurrentThreadId());
+});
+```
 
 ___
 
 ## removeBreakpoint
 
-▸ **removeBreakpoint**(`address_or_class`: any): *boolean*
-
-
 Remove a breakpoint on address_or_class
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`address_or_class` | any |
-
-**Returns:** *boolean*
-
-a boolean indicating if removal was successful
 
 ___
 
 ## removeJavaClassInitializationBreakpoint
 
-▸ **removeJavaClassInitializationBreakpoint**(`moduleName`: string): *boolean*
-
-
 Remove a java class initialization breakpoint on moduleName
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`moduleName` | string |
-
-**Returns:** *boolean*
-
-a boolean indicating if removal was successful
+```javascript
+removeJavaClassInitializationBreakpoint('android.app.Activity');
+```
 
 ___
 
 ## removeModuleInitializationBreakpoint
 
-▸ **removeModuleInitializationBreakpoint**(`moduleName`: string): *boolean*
-
-
 Remove a module initialization breakpoint on moduleName
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`moduleName` | string |
-
-**Returns:** *boolean*
-
-a boolean indicating if removal was successful
+```javascript
+removeModuleInitializationBreakpoint('mytarget.so');
+```
 
 ___
 
 ## removeWatchpoint
 
-▸ **removeWatchpoint**(`address`: any): *boolean*
-
-
 Remove a watchpoint on the given address
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`address` | any |
-
-**Returns:** *boolean*
-
-a boolean indicating if removal was successful
+```javascript
+removeWatchpoint(0x1234);
+```
 
 ___
 
 ## restart
 
-▸ **restart**(): *boolean*
-
-
 Restart the application
-
 Android only
 
-**Returns:** *boolean*
+```javascript
+restart();
+```
 
 ___
 
 ## setData
-
-▸ **setData**(`key`: any, `data`: any): *void*
-
 
 Send whatever to the data panel
 
@@ -883,39 +520,21 @@ Interceptor.attach(findExport('send'), function() {
 });
 ```
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`key` | any |
-`data` | any |
-
-**Returns:** *void*
-
 ___
 
 ## startJavaTracer
 
-▸ **startJavaTracer**(`classes`: string[], `callback`: Function | object): *boolean*
-
-
 Start the java tracer on the given classes
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`classes` | string[] |
-`callback` | Function &#124; object |
-
-**Returns:** *boolean*
+```javascript
+startJavaTracer(['android.app.Activity', 'android.view.View'], function() {
+    console.log(this.$className, this.method);
+});
+```
 
 ___
 
 ## startNativeTracer
-
-▸ **startNativeTracer**(`callback`: any): *boolean*
-
 
 Start the native tracer on the current thread
 
@@ -931,31 +550,19 @@ startNativeTracer(function() {
 });
 ```
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`callback` | any |
-
-**Returns:** *boolean*
-
 ___
 
 ## stopJavaTracer
 
-▸ **stopJavaTracer**(): *boolean*
-
-
 Stop the java tracer
 
-**Returns:** *boolean*
+```javascript
+stopJavaTracer();
+```
 
 ___
 
 ## strace
-
-▸ **strace**(`callback`: any): *boolean*
-
 
 start syscall tracing
 
@@ -966,28 +573,12 @@ strace(function() {
     }
 });
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`callback` | any |
-
-**Returns:** *boolean*
-
 ___
 
 ## writeBytes
 
-▸ **writeBytes**(`address`: any, `what`: string | ArrayBuffer): *boolean*
-
-
 Write the given hex string or ArrayBuffer into the given address
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`address` | any |
-`what` | string &#124; ArrayBuffer |
-
-**Returns:** *boolean*
+```javascript
+writeBytes(0x1234, 'aabbccddeeff');
+```
