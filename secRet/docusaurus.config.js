@@ -77,7 +77,7 @@ module.exports = {
         docs: {
           routeBasePath: '/',
           // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'doc1',
+          homePageId: 'about',
           // Please change this to your repo.
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:

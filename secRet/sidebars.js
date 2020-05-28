@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    Home: ['about', 'calendar'],
+    Home: ['calendar'],
     Documentations: ['frida', 'dwarf'],
   },
 };
