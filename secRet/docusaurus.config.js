@@ -1,7 +1,7 @@
 module.exports = {
   title: 'secRet',
   tagline: 'Secure Return Community',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'http://sec-r.et',
   baseUrl: '/',
   favicon: 'img/secret.png',
   organizationName: 'secRet-re', // Usually your GitHub org/user name.
@@ -19,12 +19,12 @@ module.exports = {
         {
           href: 'https://github.com/secRet-re',
           label: 'GitHub',
-          position: 'left',
+          position: 'right',
         },
         {
           href: 'https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-_M8AB5_tic~HTbFPY9oEFg',
           label: 'Slack',
-          position: 'left',
+          position: 'right',
         },
       ],
     },
@@ -82,6 +82,15 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
               'https://github.com/secRet-re/website/edit/master/secRet/',
+        },
+        blog: {
+          path: 'blog',
+          editUrl:
+              'https://github.com/secRet-re/website/edit/master/secRet/',
+          postsPerPage: 5,
+          feedOptions: {
+            type: 'all',
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
