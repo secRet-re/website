@@ -16,4 +16,4 @@ Living on a [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-
 
 #### [Frida](frida.md)
 
-#### [Dwarf](frida.md)
+#### [Dwarf](dwarf.md)
