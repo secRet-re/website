@@ -32,11 +32,15 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Links',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: 'Events',
+              to: 'events/',
+            },
+            {
+              label: 'Awesome',
+              to: 'awesome/',
             },
           ],
         },
@@ -63,6 +67,10 @@ module.exports = {
             {
               label: 'GitHub',
               href: 'https://github.com/secRet-re',
+            },
+            {
+              label: 'Become a patron',
+              href: 'https://www.patreon.com/securereturn',
             },
           ],
         },

@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    Home: ['calendar', 'repositories'],
+    Home: ['events', 'awesome'],
     'Api documentations': ['frida', 'dwarf'],
   },
 };

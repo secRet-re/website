@@ -1,7 +1,7 @@
 ---
-id: repositories
-title: Repositories
-sidebar_label: Repositories
+id: awesome
+title: Awesome
+sidebar_label: Awesome
 ---
 
 ## Researches

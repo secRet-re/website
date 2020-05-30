@@ -12,7 +12,7 @@ Living on a [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-
 
 <Div Class="row">
 <Div Class="col" Style="margin-top: 1em">
-    <h3><a href="calendar">Calendar</a></h3>
+    <h3><a href="events">Events</a></h3>
     Upcoming workshop, streams and activities
 </Div>
 <Div Class="col" Style="text-align: right">
@@ -22,7 +22,7 @@ Living on a [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-
 
 <Div Class="row" Style="margin-top: 2em">
 <Div Class="col">
-    <h3><a href="projects">Projects</a></h3>
+    <h3><a href="awesome">Awesome</a></h3>
     Collection of awesome open source tools
 </Div>
 <Div Class="col" Style="text-align: right">

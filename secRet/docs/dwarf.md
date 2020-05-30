@@ -3,7 +3,7 @@ id: dwarf
 title: Dwarf
 sidebar_label: Dwarf
 ---
-    
+
 ## backtrace
 
 Shortcut to retrieve native backtrace
