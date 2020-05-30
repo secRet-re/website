@@ -9,11 +9,34 @@ We are a community of awesome people, hackers, developers, reverse engineers, ma
 Living on a [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-_M8AB5_tic~HTbFPY9oEFg), doing stuff h24.
 
 ---
-> #### [Calendar](calendar.md)
-> Upcoming workshop, streams and activities
 
-#### Api documentations
+<Div Class="row">
+<Div Class="col" Style="margin-top: 1em">
+    <h3><a href="calendar">Calendar</a></h3>
+    Upcoming workshop, streams and activities
+</Div>
+<Div Class="col" Style="text-align: right">
+    <img Style="width: 6em;" src="/img/raster_w.png" />  
+</Div>
+</Div>
 
-#### [Frida](frida.md)
+<Div Class="row" Style="margin-top: 2em">
+<Div Class="col">
+    <h3><a href="projects">Projects</a></h3>
+    Collection of awesome open source tools
+</Div>
+<Div Class="col" Style="text-align: right">
+    <img Style="width: 6em;" src="/img/dwarf.png" />  
+</Div>
+</Div>
 
-#### [Dwarf](dwarf.md)
+<Div Class="row" Style="margin-top: 2em">
+<Div Class="col">
+    <h3>Api documentations</h3>
+    <h4><a href="frida">Frida</a></h4>
+    <h4><a href="dwarf">Dwarf</a></h4>
+</Div>
+<Div Class="col" Style="text-align: right">
+    <img Style="width: 6em;" src="/img/raster.png" />  
+</Div>
+</Div>
