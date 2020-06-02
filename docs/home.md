@@ -4,7 +4,7 @@ title: Home
 sidebar_label: Home
 ---
 
-We are a community of awesome people, hackers, developers, reverse engineers, malware analyst. Friends.
+We are a community of awesome people, hackers, developers, reverse engineers, malware analysts. Friends.
 
 Living on a [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-_M8AB5_tic~HTbFPY9oEFg), doing stuff h24.
 
@@ -13,7 +13,7 @@ Living on a [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-
 <Div Class="row">
 <Div Class="col" Style="margin-top: 1em">
     <h3><a href="events">Events</a></h3>
-    Upcoming workshop, streams and activities
+    Upcoming workshops, streams and activities
 </Div>
 </Div>
 

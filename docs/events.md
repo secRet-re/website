@@ -34,7 +34,7 @@ Contains details and information about upcoming events, streams, competitions wh
 ##### 14/06/20 - TBD
 
 > demonstrate reverse engineering obfuscated code with binary instrumentation using @fridadtore and QDBI on Android
->
+
 ##### [@rh0main](https://twitter.com/rh0main) of [@quarkslab](https://twitter.com/quarkslab)
 ###### Stream: TBD | Info: [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-_M8AB5_tic~HTbFPY9oEFg)
 
