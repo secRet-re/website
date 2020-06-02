@@ -15,18 +15,12 @@ Living on a [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-
     <h3><a href="events">Events</a></h3>
     Upcoming workshop, streams and activities
 </Div>
-<Div Class="col" Style="text-align: right">
-    <img Style="width: 6em;" src="/img/raster_w.png" />  
-</Div>
 </Div>
 
 <Div Class="row" Style="margin-top: 2em">
 <Div Class="col">
     <h3><a href="awesome">Awesome</a></h3>
     Collection of awesome open source tools
-</Div>
-<Div Class="col" Style="text-align: right">
-    <img Style="width: 6em;" src="/img/dwarf.png" />  
 </Div>
 </Div>
 
@@ -35,8 +29,5 @@ Living on a [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-
     <h3>Api documentations</h3>
     <h4><a href="frida">Frida</a></h4>
     <h4><a href="dwarf">Dwarf</a></h4>
-</Div>
-<Div Class="col" Style="text-align: right">
-    <img Style="width: 6em;" src="/img/raster.png" />  
 </Div>
 </Div>
