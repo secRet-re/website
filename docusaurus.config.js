@@ -5,7 +5,7 @@ module.exports = {
   baseUrl: '/',
   favicon: 'img/secret.png',
   organizationName: 'secRet-re', // Usually your GitHub org/user name.
-  projectName: 'secRet', // Usually your repo name.
+  projectName: 'website', // Usually your repo name.
   themeConfig: {
     defaultDarkMode: true,
     disableDarkMode: false,
