@@ -33,7 +33,7 @@ sidebar_label: Frida
             line = '```'
         pr.append(line)
     top += '\n'.join(pr)
-    with open('secRet/docs/frida.md', 'w') as f:
+    with open('docs/frida.md', 'w') as f:
         f.write(top)
 
 
