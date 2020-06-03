@@ -13,7 +13,7 @@ Contains details and information about upcoming events, streams, competitions wh
 ### frida-boot
 ##### 13/06/20 - 17:00 GMT+2
 
-> a binary instrumentation workshop, using Frida, for beginners
+> A binary instrumentation workshop, using Frida, for beginners
 
 ##### [@leonjza](https://twitter.com/leonjza) of [@SensePost](https://twitter.com/sensepost)
 ###### Stream: TBD | Info: [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-_M8AB5_tic~HTbFPY9oEFg)
@@ -23,7 +23,7 @@ Contains details and information about upcoming events, streams, competitions wh
 ### Extending Dwarf
 ##### 14/06/20 - TBD
 
-> Extending the core functionality of Dwarf to create your own tools for reverse engineering and code analysis.
+> Giavanni will demonsrtate how to extend the core functionality of Dwarf to create your own reverse engineering and code analysis tools.
 
 ##### [@iGio90](https://twitter.com/iGio90) of [@Overwolf](https://twitter.com/theoverwolf)
 ###### Stream: TBD | Info: [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-_M8AB5_tic~HTbFPY9oEFg)
@@ -33,7 +33,7 @@ Contains details and information about upcoming events, streams, competitions wh
 ### Binary instrumentation to reverse obfuscated code
 ##### 14/06/20 - TBD
 
-> demonstrate reverse engineering obfuscated code with binary instrumentation using @fridadtore and QDBI on Android
+> Romain will live stream reverse engineering obfuscated code with binary instrumentation using @fridadtore and QDBI on Android.
 
 ##### [@rh0main](https://twitter.com/rh0main) of [@quarkslab](https://twitter.com/quarkslab)
 ###### Stream: TBD | Info: [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-_M8AB5_tic~HTbFPY9oEFg)
@@ -43,7 +43,7 @@ Contains details and information about upcoming events, streams, competitions wh
 ### BinaryNinja HLIL
 ##### 14/06/20 - TBD
 
-> Showcase binaryninja's new HLIL feature
+> A showcase of Binary Ninja's new HLIL features.
 
 ##### [@psifertex](https://twitter.com/psifertex) @rss of [@vector35](https://twitter.com/vector35) @binaryninja
 ###### Stream: TBD | Info: [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-_M8AB5_tic~HTbFPY9oEFg)
