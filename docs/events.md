@@ -23,7 +23,7 @@ Contains details and information about upcoming events, streams, competitions wh
 ### Extending Dwarf
 ##### 14/06/20 - TBD
 
-> Giavanni will demonsrtate how to extend the core functionality of Dwarf to create your own reverse engineering and code analysis tools.
+> Giovanni will demonsrtate how to extend the core functionality of Dwarf to create your own reverse engineering and code analysis tools.
 
 ##### [@iGio90](https://twitter.com/iGio90) of [@Overwolf](https://twitter.com/theoverwolf)
 ###### Stream: TBD | Info: [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-_M8AB5_tic~HTbFPY9oEFg)
