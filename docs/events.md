@@ -8,7 +8,7 @@ Contains details and information about upcoming events, streams, competitions wh
 
 ---
 
-## Strams
+## Live Streams
 
 ### frida-boot
 ##### 13/06/20 - 17:00 GMT+2
