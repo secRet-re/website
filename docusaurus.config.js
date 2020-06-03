@@ -6,9 +6,24 @@ module.exports = {
   favicon: 'img/secret.png',
   organizationName: 'secRet-re', // Usually your GitHub org/user name.
   projectName: 'website', // Usually your repo name.
+  plugins: [
+    '@docusaurus/plugin-google-analytics',
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        cacheTime: 600 * 1000,
+        changefreq: 'weekly',
+        priority: 0.5,
+      },
+    ],
+  ],
   themeConfig: {
     defaultDarkMode: true,
     disableDarkMode: false,
+    googleAnalytics: {
+      trackingID: 'UA-168412867-1',
+      anonymizeIP: true,
+    },
     navbar: {
       title: 'secRet',
       logo: {
