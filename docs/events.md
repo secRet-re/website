@@ -54,7 +54,7 @@ Contains details and information about upcoming events, streams, competitions wh
 ### Frida wars
 ##### 27/06/20 - 18:00 GMT+2
 
-![frida-wars](img/fridaw.png)
+![frida-wars](https://sec-r.et/img/fridaw.png)
 
 > First edition of Frida wars. 
 
