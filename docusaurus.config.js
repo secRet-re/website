@@ -104,12 +104,12 @@ module.exports = {
           // Please change this to your repo.
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-              'https://github.com/secRet-re/website/edit/master/secRet/',
+              'https://github.com/secRet-re/website/edit/master/',
         },
         blog: {
           path: 'blog',
           editUrl:
-              'https://github.com/secRet-re/website/edit/master/secRet/',
+              'https://github.com/secRet-re/website/edit/master/',
           postsPerPage: 5,
         },
         theme: {
