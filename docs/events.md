@@ -60,7 +60,7 @@ Contains details and information about upcoming events, streams, competitions wh
 
 At 18:00 GMT+2 we will assign players to teams. 
 
-Please ensure fill the [signup form](https://forms.gle/uN8HEHGsPbCcxX9R8) and to be in the [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-_M8AB5_tic~HTbFPY9oEFg) in time.
+Please ensure to fill the [signup form](https://forms.gle/uN8HEHGsPbCcxX9R8) and to be in the [Slack](https://join.slack.com/t/resecret/shared_invite/zt-4sjjl4md-_M8AB5_tic~HTbFPY9oEFg) in time.
 The winning team's players will be awarded with an official Frida t-shirts with an optional nickname on sleeves or back.
 
 Schedule (timezone GMT+2)
