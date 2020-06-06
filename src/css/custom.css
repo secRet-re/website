@@ -15,6 +15,8 @@
   --ifm-color-primary-lighter: #ed6c5c;
   --ifm-color-primary-lightest: #f18f82;
   --ifm-code-font-size: 95%;
+  --ifm-navbar-background-color: #242526;
+  --ifm-navbar-link-color: #f5f6f7;
 }
 
 .docusaurus-highlight-code-line {
@@ -30,4 +32,76 @@
 
 h2 {
   font-size: 2rem !important;
+}
+
+.navbar__title {
+  margin-right: 64px;
+}
+
+/* Navbar icons */
+
+.navbar__item.navbar__link[href*="patreon"] {
+  display: flex;
+  font-size: 0;
+  padding: 0 12px;
+}
+.navbar__item.navbar__link[href*="patreon"]:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("/img/icon-patreon.svg");
+  background-repeat: no-repeat;
+}
+
+.navbar__item.navbar__link[href*="twitch"] {
+  display: flex;
+  font-size: 0;
+  padding: 0 12px;
+}
+.navbar__item.navbar__link[href*="twitch"]:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("/img/icon-twitch.svg");
+  background-repeat: no-repeat;
+}
+
+.navbar__item.navbar__link[href*="twitter"] {
+  display: flex;
+  font-size: 0;
+  padding: 0 12px;
+}
+.navbar__item.navbar__link[href*="twitter"]:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("/img/icon-twitter.svg");
+  background-repeat: no-repeat;
+}
+
+.navbar__item.navbar__link[href*="github"] {
+  display: flex;
+  font-size: 0;
+  padding: 0 12px;
+}
+.navbar__item.navbar__link[href*="github"]:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("/img/icon-github.svg");
+  background-repeat: no-repeat;
+}
+
+.navbar__item.navbar__link[href*="slack"] {
+  display: flex;
+  font-size: 0;
+  padding: 0 12px;
+}
+.navbar__item.navbar__link[href*="slack"]:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("/img/icon-slack.svg");
+  background-repeat: no-repeat;
+  padding-right: 32px;
 }

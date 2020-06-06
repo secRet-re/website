@@ -19,7 +19,8 @@ module.exports = {
   ],
   themeConfig: {
     defaultDarkMode: true,
-    disableDarkMode: false,
+    // disableDarkMode: false,
+    sidebarCollapsible: true,
     googleAnalytics: {
       trackingID: 'UA-168412867-1',
       anonymizeIP: true,
@@ -31,6 +32,33 @@ module.exports = {
         src: 'img/secret.png',
       },
       links: [
+        {
+          to: '/events',
+          label: 'Events',
+          textDecoration: 'underline',
+          position: 'left'
+        },
+        {
+          to: '/awesome',
+          label: 'Resources',
+          textDecoration: 'underline',
+          position: 'left'
+        },
+        {
+          href: 'https://www.patreon.com/securereturn',
+          label: 'Patreon',
+          position: 'right'
+        },
+        {
+          href: 'https://twitch.tv/securereturn',
+          label: 'Twitch',
+          position: 'right'
+        },
+        {
+          href: 'https://twitter.com/secureReturn',
+          label: 'Twitter',
+          position: 'right'
+        },
         {
           href: 'https://github.com/secRet-re',
           label: 'GitHub',
@@ -106,12 +134,12 @@ module.exports = {
           editUrl:
               'https://github.com/secRet-re/website/edit/master/',
         },
-        blog: {
-          path: 'blog',
-          editUrl:
-              'https://github.com/secRet-re/website/edit/master/',
-          postsPerPage: 5,
-        },
+        // blog: {
+        //   path: 'blog',
+        //   editUrl:
+        //       'https://github.com/secRet-re/website/edit/master/',
+        //   postsPerPage: 5,
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
