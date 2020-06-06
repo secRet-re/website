@@ -33,16 +33,38 @@ module.exports = {
       },
       links: [
         {
-          to: '/events',
           label: 'Events',
-          textDecoration: 'underline',
-          position: 'left'
+          position: 'left',
+          items: [
+            {
+              to: 'streams',
+              label: 'Live streams',
+            },
+            {
+              to: 'ctfs',
+              label: 'CTFs'
+            }
+          ]
         },
         {
           to: '/awesome',
           label: 'Resources',
           textDecoration: 'underline',
           position: 'left'
+        },
+        {
+          label: 'Docs',
+          position: 'left',
+          items: [
+            {
+              to: '/frida',
+              label: 'Frida',  
+            },
+            {
+              to: '/dwarf',
+              label: 'Dwarf'
+            }
+          ]
         },
         {
           href: 'https://www.patreon.com/securereturn',
@@ -130,7 +152,7 @@ module.exports = {
           // It is recommended to set document id as docs home page (`docs/` path).
           homePageId: 'home',
           // Please change this to your repo.
-          sidebarPath: require.resolve('./sidebars.js'),
+          // sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
               'https://github.com/secRet-re/website/edit/master/',
         },
