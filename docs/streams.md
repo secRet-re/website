@@ -10,7 +10,7 @@ title: Live streams
 A binary instrumentation workshop, using Frida, for beginners
 
 ##### [@leonjza](https://twitter.com/leonjza) of [@SensePost](https://twitter.com/sensepost)
-###### Stream: TBD | Info: [Twitter](https://twitter.com/leonjza/status/1267505991119233025?s=20)
+###### Stream: [YouTube](https://www.youtube.com/watch?v=CLpW1tZCblo&feature=youtu.be) | Info: [Twitter](https://twitter.com/leonjza/status/1267505991119233025?s=20)
 
 ---
 
