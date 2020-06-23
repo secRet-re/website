@@ -53,6 +53,12 @@ module.exports = {
           position: 'left'
         },
         {
+          to: '/contribute',
+          label: 'Contribute',
+          textDecoration: 'underline',
+          position: 'left'
+        },
+        {
           label: 'Docs',
           position: 'left',
           items: [

@@ -1,9 +1,8 @@
 ---
 id: awesome
 title: Awesome
-sidebar_label: Awesome
+hide_title: true
 ---
-
 ## Researches
 
 ### [Frida scripts](https://github.com/secRet-re/frida-scripts) 
